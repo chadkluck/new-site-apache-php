@@ -19,22 +19,26 @@ Options -Indexes
 # STRICT TRANSPORT SECURITY
 # ----------------------------------------------------------------------
 # Tell the browser to only connect via HTTPS
+# Note: Only uncomment if you always plan to have HTTPS as this strictly 
+# tells browsers never to connect via http and won't expire for 30 years
 # ----------------------------------------------------------------------
 
-Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+#Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
 
 # ----------------------------------------------------------------------
 # FORCE HTTPS
 # ----------------------------------------------------------------------
+# Uncomment if you have HTTPS
+# ----------------------------------------------------------------------
 
-<IfModule mod_rewrite.c>
-	RewriteEngine On 
-	RewriteCond %{HTTPS} off
-	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#	RewriteEngine On 
+#	RewriteCond %{HTTPS} off
+#	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#</IfModule>
 
 # ----------------------------------------------------------------------
-#ERROR DOCUMENTS
+# ERROR DOCUMENTS
 # ----------------------------------------------------------------------
 
 ErrorDocument 400 /errors/error.php
