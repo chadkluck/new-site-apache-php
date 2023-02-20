@@ -8,17 +8,13 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 1.6rem; /* = 16px when html font-size: 62.5% */
-	color: #062F4F; /* INK */
-	background-color: #F7F5E6; /* FRESH */
 	width: 100%;
 }
 
-/* form elements do not inherit font so we explicity apply */
-body,
 input,
 textarea,
 button {
-	font-family: "Merriweather Sans", "Lucida Sans Unicode", "Lucida Grande", sans-serif;/* SANS-SERIF */ /*see also font section*/
+	font-family: sans-serif;
 }
 
 /* border-box */
@@ -36,4 +32,18 @@ nav,
 aside, 
 div {
 	width: 100%;
+}
+
+/* Optional:
+   Give the content within the body a max width and center it
+   Add header, footer, or anything that is a direct child of body
+   Don't add header or footer if you want to keep them full width. 
+   Instead of > div you may want to use > section */
+body > div {
+	padding-right: 1.0rem;
+	padding-left: 1.0rem;
+	max-width: 80.0rem;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1.0rem;
 }
