@@ -1,5 +1,6 @@
 html {
 	font-size: 62.5%; /* http://snook.ca/archives/html_and_css/font-size-with-rem */
+	/* at 62.5% 1.6rem is 16px, 1.2rem is 12px. Easy to calc relative to px */
 	width: 100%;
 }
 
